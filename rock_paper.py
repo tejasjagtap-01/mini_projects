@@ -24,23 +24,34 @@ Scissor - Rock = Rock Win
 import random 
 
 choice = ["Rock","Paper","Scissor"]
-comp_score = 0
-user_score = 0
 
 n = input("Enter the Choice ('Rock','Paper','Scissor') : ")
 
 comp_choice = random.choice(choice)
 
-print(n)
+# print(n)
 print(f'User Choice is {n}')
 
-print(comp_choice)
+#print(comp_choice)
 print(f'Computer Choice is {comp_choice}')
 
 if(n == comp_choice):
     print("Tie")
-    print(f"Computer Choice {comp_score} and User Choice {user_score}")
-
+   
 elif (n == 'Rock'):
     if comp_choice == 'Paper':
-        print(f"{comp_choice} Win ", comp_choice+1)
+        print(f"Computer's choice {comp_choice} Win ", )
+    else:
+        print(f"User choice Rock Wins Over Scissor")
+
+elif (n == 'Paper'):
+    if comp_choice == 'Scissor':
+        print(f"Computer's choice {comp_choice} Win ", )
+    else:
+        print(f"User choice Paper Wins Over Rock")
+
+elif (n == 'Scissor'):
+    if comp_choice == 'Rock':
+        print(f"Computer's choice {comp_choice} Win ", )
+    else:
+        print(f"User choice Scissor Wins Over Paper")
